@@ -247,57 +247,67 @@
             </div>
         </section>
 
-        <section id="alur-rekrutmen" class="alur-rekrutmen section features-2">
+<section id="alur-rekrutmen" class="alur-rekrutmen section features-2">
 
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Alur Rekrutmen</h2>
-                <p>Proses langkah demi langkah untuk bergabung bersama kami di PT. Sampharindo Perdana.</p>
+    <div class="container section-title" data-aos="fade-up">
+        <h2>ALUR RECRUITMENT SAMPHARINDO GROUP</h2>
+        <p>Proses langkah demi langkah untuk bergabung bersama kami di PT. Sampharindo Perdana.</p>
+    </div>
+    <div class="container">
+
+        <div class="row gy-4 justify-content-between">
+            <div class="alur-rekrutmen-image col-lg-4 d-flex align-items-center" data-aos="fade-up">
+                <img src="assets/img/alur-rekrutmen.png" class="img-fluid" alt="Alur Rekrutmen Sampharindo Group">
             </div>
-            <div class="container">
+            
+            <div class="col-lg-7 d-flex flex-column justify-content-center">
 
-                <div class="row gy-4 justify-content-between">
-                    <div class="alur-rekrutmen-image col-lg-4 d-flex align-items-center" data-aos="fade-up">
-                        <img src="assets/img/alur-rekrutmen.png" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-lg-7 d-flex flex-column justify-content-center">
-
-                        <div class="alur-rekrutmen-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                            <i class="bi bi-file-earmark-text flex-shrink-0"></i>
-                            <div>
-                                <h4>Lamaran & Seleksi Awal</h4>
-                                <p>Kirimkan lamaran Anda melalui portal karier kami, dan tim rekrutmen kami akan
-                                    meninjau kualifikasi Anda.</p>
-                            </div>
-                        </div>
-                        <div class="alur-rekrutmen-item d-flex mt-5" data-aos="fade-up" data-aos-delay="300">
-                            <i class="bi bi-person-check flex-shrink-0"></i>
-                            <div>
-                                <h4>Tes & Wawancara</h4>
-                                <p>Jika profil Anda sesuai, Anda akan diundang untuk mengikuti tes dan wawancara.</p>
-                            </div>
-                        </div>
-                        <div class="alur-rekrutmen-item d-flex mt-5" data-aos="fade-up" data-aos-delay="400">
-                            <i class="bi bi-award flex-shrink-0"></i>
-                            <div>
-                                <h4>Evaluasi & Penawaran</h4>
-                                <p>Kami akan mengevaluasi hasil tes dan wawancara Anda, lalu memberikan penawaran kerja
-                                    jika Anda terpilih.</p>
-                            </div>
-                        </div>
-                        <div class="alur-rekrutmen-item d-flex mt-5" data-aos="fade-up" data-aos-delay="500">
-                            <i class="bi bi-person-plus flex-shrink-0"></i>
-                            <div>
-                                <h4>Onboarding</h4>
-                                <p>Selamat datang di tim! Anda akan melalui proses orientasi untuk memulai karier Anda
-                                    bersama kami.</p>
-                            </div>
-                        </div>
+                <div class="alur-rekrutmen-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                    <i class="bi bi-file-earmark-text flex-shrink-0"></i> 
+                    <div>
+                        <h4>Screening Administration</h4>
+                        <p>Kelengkapan administrasi seperti Form Permohonan, CV, KTP/SIM, Ijazah, Transkip Nilai, SKCK, Surat Keterangan Sehat, Sertifikat Vaksin, dan Pas Photo diperiksa.</p>
                     </div>
                 </div>
 
+                <div class="alur-rekrutmen-item d-flex mt-5" data-aos="fade-up" data-aos-delay="300">
+                    <i class="bi bi-people flex-shrink-0"></i>
+                    <div>
+                        <h4>Interview</h4>
+                        <p>Tahapan wawancara yang melibatkan **Interview HR** dan **Interview User/Manager** untuk karyawan baru.</p>
+                    </div>
+                </div>
+
+                <div class="alur-rekrutmen-item d-flex mt-5" data-aos="fade-up" data-aos-delay="400">
+                    <i class="bi bi-tools flex-shrink-0"></i>
+                    <div>
+                        <h4>Tes Bidang</h4>
+                        <p>Tes seleksi yang sesuai dengan posisi yang dilamar, dapat berupa **tes tertulis** atau **praktek**.</p>
+                    </div>
+                </div>
+
+                <div class="alur-rekrutmen-item d-flex mt-5" data-aos="fade-up" data-aos-delay="500">
+                    <i class="bi bi-headset flex-shrink-0"></i>
+                    <div>
+                        <h4>Psikotest</h4>
+                        <p>Meliputi Tes **IQ, Kepribadian, dan Sikap Kerja** untuk memahami kemampuan dan kecocokan, dilakukan secara *offline* maupun *online*.</p>
+                    </div>
+                </div>
+                
+                <div class="alur-rekrutmen-item d-flex mt-5" data-aos="fade-up" data-aos-delay="600">
+                    <i class="bi bi-bullhorn flex-shrink-0"></i>
+                    <div>
+                        <h4>Announcement</h4>
+                        <p>Pengumuman kandidat yang lolos akan diberitahukan oleh **Tim HRD PT Sampharindo**.</p>
+                    </div>
+                </div>
+                
+            </div>
             </div>
 
-        </section>
+    </div>
+
+</section>
 
         <section id="available-jobs" class="services section">
 
