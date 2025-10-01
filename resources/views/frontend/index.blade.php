@@ -347,7 +347,7 @@
 
                     {{-- 1. BAGIAN HEADER BANNER --}}
                     <div class="modal-header p-0 border-0 position-relative">
-                        <img src="http://127.0.0.1:666/assets/rekrutmen-banner.png"
+                        <img src="http://career.sampharindogroup.com/assets/rekrutmen-banner.png"
                             class="img-fluid w-100 rounded-top" alt="Sampharindo Group Career Banner"
                             style="max-height: 150px; object-fit: cover;">
 
