@@ -44,7 +44,7 @@
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-            <a href="index.html" class="logo d-flex align-items-center">
+            <a href="#" class="logo d-flex align-items-center">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
                 <!-- <img src="assets/img/logo.png" alt=""> -->
                 <h1 class="sitename">CAREER SAMPHARINDO GROUP</h1>
@@ -56,25 +56,6 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#available-jobs">Available Jobs !</a></li>
                     <li><a href="#gallery">Gallery</a></li>
-                    {{-- <li><a href="#team">Team</a></li> --}}
-                    {{-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li> --}}
-                    {{-- <li><a href="#contact">Contact</a></li> --}}
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
@@ -247,67 +228,73 @@
             </div>
         </section>
 
-<section id="alur-rekrutmen" class="alur-rekrutmen section features-2">
+        <section id="alur-rekrutmen" class="alur-rekrutmen section features-2">
 
-    <div class="container section-title" data-aos="fade-up">
-        <h2>ALUR RECRUITMENT SAMPHARINDO GROUP</h2>
-        <p>Proses langkah demi langkah untuk bergabung bersama kami di PT. Sampharindo Perdana.</p>
-    </div>
-    <div class="container">
-
-        <div class="row gy-4 justify-content-between">
-            <div class="alur-rekrutmen-image col-lg-4 d-flex align-items-center" data-aos="fade-up">
-                <img src="assets/img/alur-rekrutmen.png" class="img-fluid" alt="Alur Rekrutmen Sampharindo Group">
+            <div class="container section-title" data-aos="fade-up">
+                <h2>ALUR RECRUITMENT SAMPHARINDO GROUP</h2>
+                <p>Proses langkah demi langkah untuk bergabung bersama kami di PT. Sampharindo Perdana.</p>
             </div>
-            
-            <div class="col-lg-7 d-flex flex-column justify-content-center">
+            <div class="container">
 
-                <div class="alur-rekrutmen-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                    <i class="bi bi-file-earmark-text flex-shrink-0"></i> 
-                    <div>
-                        <h4>Screening Administration</h4>
-                        <p>Kelengkapan administrasi seperti Form Permohonan, CV, KTP/SIM, Ijazah, Transkip Nilai, SKCK, Surat Keterangan Sehat, Sertifikat Vaksin, dan Pas Photo diperiksa.</p>
+                <div class="row gy-4 justify-content-between">
+                    <div class="alur-rekrutmen-image col-lg-4 d-flex align-items-center" data-aos="fade-up">
+                        <img src="assets/img/alur-rekrutmen.png" class="img-fluid"
+                            alt="Alur Rekrutmen Sampharindo Group">
+                    </div>
+
+                    <div class="col-lg-7 d-flex flex-column justify-content-center">
+
+                        <div class="alur-rekrutmen-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                            <i class="bi bi-file-earmark-text flex-shrink-0"></i>
+                            <div>
+                                <h4>Screening Administration</h4>
+                                <p>Kelengkapan administrasi seperti Form Permohonan, CV, KTP/SIM, Ijazah, Transkip
+                                    Nilai, SKCK, Surat Keterangan Sehat, Sertifikat Vaksin, dan Pas Photo diperiksa.</p>
+                            </div>
+                        </div>
+
+                        <div class="alur-rekrutmen-item d-flex mt-5" data-aos="fade-up" data-aos-delay="300">
+                            <i class="bi bi-people flex-shrink-0"></i>
+                            <div>
+                                <h4>Interview</h4>
+                                <p>Tahapan wawancara yang melibatkan **Interview HR** dan **Interview User/Manager**
+                                    untuk karyawan baru.</p>
+                            </div>
+                        </div>
+
+                        <div class="alur-rekrutmen-item d-flex mt-5" data-aos="fade-up" data-aos-delay="400">
+                            <i class="bi bi-tools flex-shrink-0"></i>
+                            <div>
+                                <h4>Tes Bidang</h4>
+                                <p>Tes seleksi yang sesuai dengan posisi yang dilamar, dapat berupa **tes tertulis**
+                                    atau **praktek**.</p>
+                            </div>
+                        </div>
+
+                        <div class="alur-rekrutmen-item d-flex mt-5" data-aos="fade-up" data-aos-delay="500">
+                            <i class="bi bi-headset flex-shrink-0"></i>
+                            <div>
+                                <h4>Psikotest</h4>
+                                <p>Meliputi Tes **IQ, Kepribadian, dan Sikap Kerja** untuk memahami kemampuan dan
+                                    kecocokan, dilakukan secara *offline* maupun *online*.</p>
+                            </div>
+                        </div>
+
+                        <div class="alur-rekrutmen-item d-flex mt-5" data-aos="fade-up" data-aos-delay="600">
+                            <i class="bi bi-bullhorn flex-shrink-0"></i>
+                            <div>
+                                <h4>Announcement</h4>
+                                <p>Pengumuman kandidat yang lolos akan diberitahukan oleh **Tim HRD PT Sampharindo**.
+                                </p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
-                <div class="alur-rekrutmen-item d-flex mt-5" data-aos="fade-up" data-aos-delay="300">
-                    <i class="bi bi-people flex-shrink-0"></i>
-                    <div>
-                        <h4>Interview</h4>
-                        <p>Tahapan wawancara yang melibatkan **Interview HR** dan **Interview User/Manager** untuk karyawan baru.</p>
-                    </div>
-                </div>
-
-                <div class="alur-rekrutmen-item d-flex mt-5" data-aos="fade-up" data-aos-delay="400">
-                    <i class="bi bi-tools flex-shrink-0"></i>
-                    <div>
-                        <h4>Tes Bidang</h4>
-                        <p>Tes seleksi yang sesuai dengan posisi yang dilamar, dapat berupa **tes tertulis** atau **praktek**.</p>
-                    </div>
-                </div>
-
-                <div class="alur-rekrutmen-item d-flex mt-5" data-aos="fade-up" data-aos-delay="500">
-                    <i class="bi bi-headset flex-shrink-0"></i>
-                    <div>
-                        <h4>Psikotest</h4>
-                        <p>Meliputi Tes **IQ, Kepribadian, dan Sikap Kerja** untuk memahami kemampuan dan kecocokan, dilakukan secara *offline* maupun *online*.</p>
-                    </div>
-                </div>
-                
-                <div class="alur-rekrutmen-item d-flex mt-5" data-aos="fade-up" data-aos-delay="600">
-                    <i class="bi bi-bullhorn flex-shrink-0"></i>
-                    <div>
-                        <h4>Announcement</h4>
-                        <p>Pengumuman kandidat yang lolos akan diberitahukan oleh **Tim HRD PT Sampharindo**.</p>
-                    </div>
-                </div>
-                
             </div>
-            </div>
 
-    </div>
-
-</section>
+        </section>
 
         <section id="available-jobs" class="services section">
 
@@ -326,12 +313,16 @@
                                 <div class="icon">
                                     <i class="bi bi-briefcase"></i>
                                 </div>
-                                <a href="#job-details-modal" class="stretched-link" data-bs-toggle="modal"
-                                    data-bs-target="#job-details-modal" data-job-id="{{ $job->id }}">
+
+                                {{-- **PERUBAHAN UTAMA:** Tautan ke halaman detail terpisah yang SEO-friendly --}}
+                                {{-- Asumsi: Route di server Anda adalah /lowongan/{id}/{slug} --}}
+                                <a href="{{ route('jobs.show', ['slug' => Str::slug($job->position)]) }}"
+                                    class="stretched-link">
                                     <h3>{{ $job->position }}</h3>
                                 </a>
                                 <p>{{ Str::limit(strip_tags($job->qualification), 100) }}</p>
-                                <span class="badge bg-success">{{ $job->status }}</span>
+                                <span
+                                    class="badge {{ $job->status == 'Open' ? 'bg-success' : 'bg-secondary' }}">{{ $job->status }}</span>
                             </div>
                         </div>
                     @endforeach
@@ -555,7 +546,7 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
-    {{-- Tambahkan script Blade Anda di sini --}}
+    {{-- Tambahkan script Blade Anda di sini
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const jobs = @json($jobs);
@@ -610,7 +601,7 @@
                 console.error('Modal element with ID "job-details-modal" not found.');
             }
         });
-    </script>
+    </script> --}}
 
 </body>
 

@@ -1622,3 +1622,22 @@ section,
 .client-logo-wrapper img:hover {
   transform: scale(1.5); /* Logo sedikit membesar saat disentuh mouse */
 }
+
+.page-title.dark-background .breadcrumbs ol li a {
+    /* Set warna teks menjadi putih agak keabu-abuan agar kontras */
+    color: #F0F0F0 !important; 
+    /* Penting: Gunakan !important jika ada aturan lain yang menimpanya */
+    
+    /* Opsional: Efek transisi saat di-hover */
+    transition: color 0.3s;
+}
+
+.page-title.dark-background .breadcrumbs ol li a:hover {
+    /* Warna menjadi putih murni saat disorot/hover */
+    color: #FFFFFF !important;
+}
+
+/* Memastikan elemen aktif (judul lowongan) juga berwarna terang */
+.page-title.dark-background .breadcrumbs ol li.current {
+    color: #FFFFFF !important;
+}
