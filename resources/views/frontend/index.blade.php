@@ -2,8 +2,7 @@
 <html lang="en">
 
 <head>
-    <!-- Google Tag Manager (Script) - Harus diletakkan di bagian HEAD -->
-    <script>
+        <script>
         (function(w, d, s, l, i) {
             w[l] = w[l] || [];
             w[l].push({
@@ -19,21 +18,15 @@
             f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-MRS4TPT9');
     </script>
-    <!-- Akhir Google Tag Manager (Script) -->
-
-    <!-- Kode GA4 langsung G-1D9DD65HQP telah dihapus karena sudah di-handle oleh GTM di atas. -->
-
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>CAREER - SAMPHARINDO GROUP</title>
-    <meta name="description"
-        content="Temukan lowongan karir terbaru di Sampharindo Group (PT Sampharindo Perdana). Wujudkan potensi Anda di industri farmasi terkemuka di Semarang.">
-    <meta name="keywords"
-        content="Lowongan Kerja, Karir Sampharindo, Sampharindo Group, PT Sampharindo Perdana, Lowongan Farmasi, Loker Semarang, Rekrutmen">
+    <meta name="description" content="Temukan lowongan karir terbaru di Sampharindo Group (PT Sampharindo Perdana). Wujudkan potensi Anda di industri farmasi terkemuka di Semarang.">
+    <meta name="keywords" content="Lowongan Kerja, Karir Sampharindo, Sampharindo Group, PT Sampharindo Perdana, Lowongan Farmasi, Loker Semarang, Rekrutmen">
 
     <!-- Favicons -->
-    <link href="{{ asset('assets/icon.ico') }}" rel="icon">
-    <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <link href="assets/icon.ico" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -43,31 +36,28 @@
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/animate.css/animate.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Main CSS File -->
-    <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
 
 </head>
 
 <body class="index-page">
-    <!-- Google Tag Manager (noscript) - Harus diletakkan segera setelah tag <body> dibuka -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRS4TPT9" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- Akhir Google Tag Manager (noscript) -->
 
-    <!-- HEADER (NAVIGASI) - Struktur sudah dikoreksi -->
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
             <a href="#" class="logo d-flex align-items-center">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
-                <!-- <img src="assets/img/logo.png" alt=""> -->
+                <img src="{{('assets/icon.ico')}}" alt="LOGO">
                 <h1 class="sitename">CAREER SAMPHARINDO GROUP</h1>
             </a>
 
@@ -83,7 +73,6 @@
 
         </div>
     </header>
-    <!-- AKHIR HEADER -->
 
     <main class="main">
 
@@ -99,11 +88,9 @@
                         <h2 class="animate__animated animate__fadeInDown">Wujudkan Potensi Terbaik Anda Bersama Kami
                             <span>di Sampharindo Group</span>
                         </h2>
-                        <p class="animate__animated animate__fadeInUp">PT. Sampharindo Perdana adalah tempat bagi
-                            para
+                        <p class="animate__animated animate__fadeInUp">PT. Sampharindo Perdana adalah tempat bagi para
                             profesional yang ingin membuat perbedaan. Dengan proyek-proyek inovatif dan kesempatan
-                            belajar yang tak terbatas, Anda akan menemukan jalur untuk mencapai versi terbaik dari
-                            diri
+                            belajar yang tak terbatas, Anda akan menemukan jalur untuk mencapai versi terbaik dari diri
                             Anda.</p>
                         <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read
                             More</a>
@@ -115,10 +102,8 @@
                     <div class="carousel-container">
                         <h2 class="animate__animated animate__fadeInDown">Tempat di Mana Karier Anda Bersemi</h2>
                         <p class="animate__animated animate__fadeInUp">Bergabunglah dengan tim yang dinamis dan
-                            suportif. Kami menciptakan lingkungan kerja yang positif, di mana ide-ide Anda
-                            didengarkan
-                            dan potensi Anda dihargai. Mulailah perjalanan karier Anda yang berarti bersama kami.
-                        </p>
+                            suportif. Kami menciptakan lingkungan kerja yang positif, di mana ide-ide Anda didengarkan
+                            dan potensi Anda dihargai. Mulailah perjalanan karier Anda yang berarti bersama kami.</p>
                         <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read
                             More</a>
                     </div>
@@ -149,8 +134,7 @@
             <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 viewBox="0 24 150 28 " preserveAspectRatio="none">
                 <defs>
-                    <path id="wave-path"
-                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+                    <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
                     </path>
                 </defs>
                 <g class="wave1">
@@ -173,7 +157,7 @@
 
                 <div class="row position-relative">
                     <div class="col-lg-7 about-img" data-aos="zoom-out" data-aos-delay="200">
-                        <img src="{{ asset('assets/img/gallery/perdana.jpg') }}" alt="PT Sampharindo Perdana Building" class="img-fluid">
+                        <img src="assets/img/gallery/perdana.jpg">
                     </div>
                     <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
                         <h2 class="inner-title">Perjalanan Penuh Dedikasi Menuju Kesehatan Indonesia</h2>
@@ -185,30 +169,24 @@
                                 nama menjadi <b>PT. Sekar Mirah Laboratories</b>.</p>
                             <p>Tonggak penting berikutnya adalah pada <b>17 November 1988</b>, saat dimulainya
                                 pembangunan fasilitas produksi di Jl. Tambak Aji Timur I No. 1, Semarang. Dengan
-                                fasilitas tersebut, PT. Sampharindo Perdana meluncurkan produk pertamanya pada
-                                <b>Mei
+                                fasilitas tersebut, PT. Sampharindo Perdana meluncurkan produk pertamanya pada <b>Mei
                                     1992</b>. Seiring pertumbuhan, pembangunan fasilitas produksi betalaktam
-                                dilanjutkan, dan produksi dimulai pada <b>April 1996</b>.
-                            </p>
+                                dilanjutkan, dan produksi dimulai pada <b>April 1996</b>.</p>
                             <p>Untuk merespon pesatnya pertumbuhan industri farmasi, perusahaan meluncurkan berbagai
-                                produk baru ke pasar Indonesia pada <b>tahun 1998</b>. Peningkatan produksi ini
-                                memicu
+                                produk baru ke pasar Indonesia pada <b>tahun 1998</b>. Peningkatan produksi ini memicu
                                 pembangunan gudang baru di Jl. Tambak Aji Raya No. 8, Semarang, untuk mendukung
                                 distribusi.</p>
-                            <p>Hingga saat ini, PT. Sampharindo Perdana terus menunjukkan komitmen kuatnya.
-                                Perusahaan
+                            <p>Hingga saat ini, PT. Sampharindo Perdana terus menunjukkan komitmen kuatnya. Perusahaan
                                 telah berkembang pesat dan mendirikan beberapa anak perusahaan yang berperan penting
                                 dalam ekosistem bisnis, yaitu:</p>
                             <ul>
-                                <li><i class="bi bi-check-circle"></i> <span><b>Sampharindo Perdana</b>: Entitas
-                                        utama
+                                <li><i class="bi bi-check-circle"></i> <span><b>Sampharindo Perdana</b>: Entitas utama
                                         yang terus berinovasi dalam produk farmasi.</span></li>
                                 <li><i class="bi bi-check-circle"></i> <span><b>Sampharindo Putra Trading</b>:
                                         Didirikan pada <b>6 April 2015</b> sebagai distributor tunggal.</span></li>
                                 <li><i class="bi bi-check-circle"></i> <span><b>Sampharindo Perdana Investama</b>:
                                         Entitas yang fokus pada pengembangan investasi strategis.</span></li>
-                                <li><i class="bi bi-check-circle"></i> <span><b>Sampharindo Retroviral
-                                            Indonesia</b>:
+                                <li><i class="bi bi-check-circle"></i> <span><b>Sampharindo Retroviral Indonesia</b>:
                                         Didirikan pada <b>2018</b> sebagai pemain global yang berkolaborasi dengan
                                         Macleods.</span></li>
                             </ul>
@@ -217,7 +195,8 @@
                                 kontribusi nyata bagi kesehatan masyarakat.</p>
                             <div class="watch-video d-flex align-items-center position-relative">
                                 <i class="bi bi-play-circle"></i>
-                                <a href="#" class="glightbox stretched-link">Watch Video</a>
+                                <a href="#"
+                                    class="glightbox stretched-link">Watch Video</a>
                             </div>
                         </div>
                     </div>
@@ -234,25 +213,25 @@
 
                     <div class="col-xl-2 col-md-2 col-4 client-logo">
                         <div class="client-logo-wrapper">
-                            <img src="{{ asset('assets/img/gallery/sp.png') }}" class="img-fluid" alt="Sampharindo Perdana Logo">
+                            <img src="assets/img/gallery/sp.png" class="img-fluid" alt="">
                         </div>
                     </div>
 
                     <div class="col-xl-2 col-md-2 col-4 client-logo">
                         <div class="client-logo-wrapper">
-                            <img src="{{ asset('assets/img/gallery/spi.png') }}" class="img-fluid" alt="Sampharindo Perdana Investama Logo">
+                            <img src="assets/img/gallery/spi.png" class="img-fluid" alt="">
                         </div>
                     </div>
 
                     <div class="col-xl-2 col-md-2 col-4 client-logo">
                         <div class="client-logo-wrapper">
-                            <img src="{{ asset('assets/img/gallery/spt.png') }}" class="img-fluid" alt="Sampharindo Putra Trading Logo">
+                            <img src="assets/img/gallery/spt.png" class="img-fluid" alt="">
                         </div>
                     </div>
 
                     <div class="col-xl-2 col-md-2 col-4 client-logo">
                         <div class="client-logo-wrapper">
-                            <img src="{{ asset('assets/img/gallery/sri.png') }}" class="img-fluid" alt="Sampharindo Retroviral Indonesia Logo">
+                            <img src="assets/img/gallery/sri.png" class="img-fluid" alt="">
                         </div>
                     </div>
 
@@ -270,7 +249,7 @@
 
                 <div class="row gy-4 justify-content-between">
                     <div class="alur-rekrutmen-image col-lg-4 d-flex align-items-center" data-aos="fade-up">
-                        <img src="{{ asset('assets/img/alur-rekrutmen.png') }}" class="img-fluid"
+                        <img src="assets/img/alur-rekrutmen.png" class="img-fluid"
                             alt="Alur Rekrutmen Sampharindo Group">
                     </div>
 
@@ -281,8 +260,7 @@
                             <div>
                                 <h4>Screening Administration</h4>
                                 <p>Kelengkapan administrasi seperti Form Permohonan, CV, KTP/SIM, Ijazah, Transkip
-                                    Nilai, SKCK, Surat Keterangan Sehat, Sertifikat Vaksin, dan Pas Photo diperiksa.
-                                </p>
+                                    Nilai, SKCK, Surat Keterangan Sehat, Sertifikat Vaksin, dan Pas Photo diperiksa.</p>
                             </div>
                         </div>
 
@@ -317,8 +295,7 @@
                             <i class="bi bi-bullhorn flex-shrink-0"></i>
                             <div>
                                 <h4>Announcement</h4>
-                                <p>Pengumuman kandidat yang lolos akan diberitahukan oleh **Tim HRD PT
-                                    Sampharindo**.
+                                <p>Pengumuman kandidat yang lolos akan diberitahukan oleh **Tim HRD PT Sampharindo**.
                                 </p>
                             </div>
                         </div>
@@ -349,13 +326,13 @@
                                 </div>
 
 
-                                <a href="{{ route('jobs.show', ['slug' => Str::slug($job->position)]) }}"
+                                <a href="{{route('jobs.show', ['slug' => Str::slug($job->position)]) }}"
                                     class="stretched-link">
-                                    <h3>{{ $job->position }}</h3>
+                                    <h3>{{$job->position }}</h3>
                                 </a>
-                                <p>{{ Str::limit(strip_tags($job->qualification), 100) }}</p>
+                                <p>{{Str::limit(strip_tags($job->qualification), 100) }}</p>
                                 <span
-                                    class="badge {{ $job->status == 'Open' ? 'bg-success' : 'bg-secondary' }}">{{ $job->status }}</span>
+                                    class="badge {{$job->status == 'Open' ? 'bg-success' : 'bg-secondary' }}">{{ $job->status }}</span>
                             </div>
                         </div>
                     @endforeach
@@ -365,7 +342,7 @@
         </section>
 
         <section id="call-to-action" class="call-to-action section dark-background">
-            <img src="{{ asset('assets/img/cta-bg.png') }}" alt="Call to Action Background">
+            <img src="assets/img/cta-bg.png" alt="">
             <div class="container">
                 <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
                     <div class="col-xl-10">
@@ -396,38 +373,31 @@
                         <div class="gallery-item">
                             <a href="{{ asset('assets/img/gallery/audithalal.jpg') }}" class="glightbox"
                                 data-gallery="images-gallery">
-                                <img src="{{ asset('assets/img/gallery/audithalal.jpg') }}" alt="Audit Halal"
-                                    class="img-fluid">
+                                <img src="{{ asset('assets/img/gallery/audithalal.jpg') }}" alt="" class="img-fluid">
                             </a>
                         </div>
                     </div><!-- End Gallery Item -->
 
                     <div class="col-lg-3 col-md-4">
                         <div class="gallery-item">
-                            <a href="{{ asset('assets/img/gallery/iso.jpg') }}" class="glightbox"
-                                data-gallery="images-gallery">
-                                <img src="{{ asset('assets/img/gallery/iso.jpg') }}" alt="Sertifikat ISO"
-                                    class="img-fluid">
+                            <a href="{{ asset('assets/img/gallery/iso.jpg') }}" class="glightbox" data-gallery="images-gallery">
+                                <img src="{{ asset('assets/img/gallery/iso.jpg') }}" alt="" class="img-fluid">
                             </a>
                         </div>
                     </div><!-- End Gallery Item -->
 
                     <div class="col-lg-3 col-md-4">
                         <div class="gallery-item">
-                            <a href="{{ asset('assets/img/gallery/posong.jpg') }}" class="glightbox"
-                                data-gallery="images-gallery">
-                                <img src="{{ asset('assets/img/gallery/posong.jpg') }}" alt="Kegiatan Posong 1"
-                                    class="img-fluid">
+                            <a href="{{ asset('assets/img/gallery/posong.jpg') }}" class="glightbox" data-gallery="images-gallery">
+                                <img src="{{ asset('assets/img/gallery/posong.jpg') }}" alt="" class="img-fluid">
                             </a>
                         </div>
                     </div><!-- End Gallery Item -->
 
                     <div class="col-lg-3 col-md-4">
                         <div class="gallery-item">
-                            <a href="{{ asset('assets/img/gallery/posong2.jpg') }}" class="glightbox"
-                                data-gallery="images-gallery">
-                                <img src="{{ asset('assets/img/gallery/posong2.jpg') }}" alt="Kegiatan Posong 2"
-                                    class="img-fluid">
+                            <a href="{{ asset('assets/img/gallery/posong2.jpg') }}" class="glightbox" data-gallery="images-gallery">
+                                <img src="{{ asset('assets/img/gallery/posong2.jpg') }}" alt="" class="img-fluid">
                             </a>
                         </div>
                     </div><!-- End Gallery Item -->
