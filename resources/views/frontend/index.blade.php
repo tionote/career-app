@@ -30,13 +30,6 @@
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
 
-    <!-- =======================================================
-  * Template Name: Avilon
-  * Template URL: https://bootstrapmade.com/avilon-bootstrap-landing-page-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="index-page">
@@ -184,7 +177,7 @@
                                 kontribusi nyata bagi kesehatan masyarakat.</p>
                             <div class="watch-video d-flex align-items-center position-relative">
                                 <i class="bi bi-play-circle"></i>
-                                <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
+                                <a href="#"
                                     class="glightbox stretched-link">Watch Video</a>
                             </div>
                         </div>
@@ -543,65 +536,7 @@
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
-    {{-- Tambahkan script Blade Anda di sini
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const jobs = @json($jobs);
-
-            const jobDetailsModal = document.getElementById('job-details-modal');
-            const applyBtn = document.getElementById('modal-apply-btn');
-
-            if (jobDetailsModal) {
-                jobDetailsModal.addEventListener('show.bs.modal', function(event) {
-                    const button = event.relatedTarget;
-                    const jobId = button.getAttribute('data-job-id');
-
-                    const job = jobs.find(j => j.id == jobId);
-
-                    if (job) {
-                        // Isi detail modal (tetap sama)
-                        document.getElementById('modal-position').textContent = job.position;
-                        document.getElementById('modal-qualification').innerHTML = job.qualification;
-                        document.getElementById('modal-background').innerHTML = job.job_description;
-                        document.getElementById('modal-status').textContent = job.status;
-
-                        // --- PERUBAHAN UTAMA DI SINI ---
-
-                        // Gunakan URL domain penuh yang Anda tentukan
-                        // Ganti 'http' dengan 'https' jika website Anda menggunakan SSL
-                        const baseUrl = 'https://simco.sampharindogroup.com/rekrutmen/';
-                        const applyUrl = baseUrl + job
-                        .id; // Menghasilkan: https://simco.sampharindogroup.com/rekrutmen/15
-
-                        // Set href tombol Apply
-                        applyBtn.setAttribute('href', applyUrl);
-
-                        // Atur visibilitas tombol
-                        if (job.status === 'Open') {
-                            applyBtn.style.display = 'inline-block';
-                        } else {
-                            applyBtn.style.display = 'none';
-                        }
-                        // --- AKHIR PERUBAHAN ---
-
-                    } else {
-                        // Logika jika data lowongan tidak ditemukan
-                        console.error('Job with ID ' + jobId + ' not found.');
-                        // ... (logika pengisian modal error)
-
-                        if (applyBtn) {
-                            applyBtn.style.display = 'none';
-                        }
-                    }
-                });
-            } else {
-                console.error('Modal element with ID "job-details-modal" not found.');
-            }
-        });
-    </script> --}}
 
 </body>
 

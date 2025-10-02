@@ -6,29 +6,41 @@ use Illuminate\Support\Facades\Route;
 use App\Models\AvailableJobs; 
 use Spatie\Sitemap\Sitemap; 
 use Spatie\Sitemap\Tags\Url;
+use Illuminate\Support\Str;
 
 Route::get('/', [AvailableJobsController::class, 'index'])->name('jobs.index');
-Route::get('/lowongan-kerja-semarang/{slug}', [AvailableJobsController::class, 'show'])->name('jobs.show');
-Route::get('/rekrutmen', [RekrutmenController::class, 'index'])->name('rekrutmen.index');
-Route::get('/rekrutmen/referral/{nama}', [RekrutmenController::class, 'index'])->name('rekrutmen.referral');
-Route::post('/rekrutmen-submit', [RekrutmenController::class, 'store'])->name('rekrutmen.store');
-Route::post('/rekrutmen/check-nik', [RekrutmenController::class, 'checkNik'])->name('rekrutmen.checkNik');
+Route::get('lowongan-farmasi-semarang/{slug}', [AvailableJobsController::class, 'show'])->name('jobs.show');
 
 Route::get('sitemap.xml', function () {
     
     $sitemap = Sitemap::create(config('app.url')); 
 
-    $sitemap->add(Url::create('/')
+    // 1. Tautan Halaman Utama (Index)
+    $sitemap->add(Url::create(route('jobs.index'))
         ->setPriority(1.0)
         ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY));
     
-    $sitemap->add(Url::create('/lowongan-farmasi-semarang') 
-        ->setPriority(0.9) 
-        ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY));
-
+    // 2. Tautan Halaman Rekrutmen (Form Aplikasi)
+    $sitemap->add(Url::create(route('rekrutmen.index')) 
+        ->setPriority(0.7) 
+        ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY));
+    
+    // 3. Tautan Detail Lowongan (Iterasi dari Database)
     AvailableJobs::where('status', 'open')->get()->each(function (AvailableJobs $job) use ($sitemap) {
         
-        $url = route('jobs.show', ['slug' => $job->slug]);
+        // Cek data position. Jika kosong, kita tidak bisa membuat slug, maka dilewati.
+        if (empty($job->position)) {
+            // Jika ini masih error, coba hapus baris ini dan bersihkan cache lagi.
+            // \Log::warning('Job ID ' . $job->id . ' dilewati karena Position kosong.');
+            return; // Lanjutkan ke iterasi berikutnya
+        }
+        
+        // FIX KRITIS: Generate slug secara dinamis dari 'position', 
+        // sama seperti cara Controller memvalidasinya.
+        $generatedSlug = Str::slug($job->position);
+        
+        // Memastikan parameter slug selalu diberikan ke jobs.show
+        $url = route('jobs.show', ['slug' => $generatedSlug]);
 
         $sitemap->add(Url::create($url) 
             ->setLastModificationDate($job->updated_at)

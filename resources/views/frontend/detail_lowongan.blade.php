@@ -133,7 +133,7 @@
                                 </a>
 
                             </div>
-                        </div>
+                        </div>  
 
                         <hr class="mt-5">
 
