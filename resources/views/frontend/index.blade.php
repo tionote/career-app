@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>CAREER - SAMPHARINDO GROUP</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="Temukan lowongan karir terbaru di Sampharindo Group (PT Sampharindo Perdana). Wujudkan potensi Anda di industri farmasi terkemuka di Semarang.">
+    <meta name="keywords" content="Lowongan Kerja, Karir Sampharindo, Sampharindo Group, PT Sampharindo Perdana, Lowongan Farmasi, Loker Semarang, Rekrutmen">
 
     <!-- Favicons -->
     <link href="assets/icon.ico" rel="icon">
@@ -345,7 +345,6 @@
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
                 <h2>Gallery</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
             </div><!-- End Section Title -->
 
             <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
@@ -381,42 +380,6 @@
                         <div class="gallery-item">
                             <a href="{{ asset('assets/img/gallery/posong2.jpg') }}" class="glightbox" data-gallery="images-gallery">
                                 <img src="{{ asset('assets/img/gallery/posong2.jpg') }}" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div><!-- End Gallery Item -->
-
-                    <div class="col-lg-3 col-md-4">
-                        <div class="gallery-item">
-                            <a href="{{ asset('assets/img/gallery/gallery-5.jpg') }}" class="glightbox"
-                                data-gallery="images-gallery">
-                                <img src="{{ asset('assets/img/gallery/gallery-5.jpg') }}" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div><!-- End Gallery Item -->
-
-                    <div class="col-lg-3 col-md-4">
-                        <div class="gallery-item">
-                            <a href="{{ asset('assets/img/gallery/gallery-6.jpg') }}" class="glightbox"
-                                data-gallery="images-gallery">
-                                <img src="{{ asset('assets/img/gallery/gallery-6.jpg') }}" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div><!-- End Gallery Item -->
-
-                    <div class="col-lg-3 col-md-4">
-                        <div class="gallery-item">
-                            <a href="{{ asset('assets/img/gallery/gallery-7.jpg') }}" class="glightbox"
-                                data-gallery="images-gallery">
-                                <img src="{{ asset('assets/img/gallery/gallery-7.jpg') }}" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div><!-- End Gallery Item -->
-
-                    <div class="col-lg-3 col-md-4">
-                        <div class="gallery-item">
-                            <a href="{{ asset('assets/img/gallery/gallery-8.jpg') }}" class="glightbox"
-                                data-gallery="images-gallery">
-                                <img src="{{ asset('assets/img/gallery/gallery-8.jpg') }}" alt="" class="img-fluid">
                             </a>
                         </div>
                     </div><!-- End Gallery Item -->
