@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\AvailableJobsController;
-use App\Http\Controllers\RekrutmenController;
 use Illuminate\Support\Facades\Route;
 use App\Models\AvailableJobs; 
 use Spatie\Sitemap\Sitemap; 

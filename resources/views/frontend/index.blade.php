@@ -307,15 +307,14 @@
                                     <i class="bi bi-briefcase"></i>
                                 </div>
 
-                                {{-- **PERUBAHAN UTAMA:** Tautan ke halaman detail terpisah yang SEO-friendly --}}
-                                {{-- Asumsi: Route di server Anda adalah /lowongan/{id}/{slug} --}}
-                                <a href="{{ route('jobs.show', ['slug' => Str::slug($job->position)]) }}"
+
+                                <a href="{{route('jobs.show', ['slug' => Str::slug($job->position)]) }}"
                                     class="stretched-link">
-                                    <h3>{{ $job->position }}</h3>
+                                    <h3>{{$job->position }}</h3>
                                 </a>
-                                <p>{{ Str::limit(strip_tags($job->qualification), 100) }}</p>
+                                <p>{{Str::limit(strip_tags($job->qualification), 100) }}</p>
                                 <span
-                                    class="badge {{ $job->status == 'Open' ? 'bg-success' : 'bg-secondary' }}">{{ $job->status }}</span>
+                                    class="badge {{$job->status == 'Open' ? 'bg-success' : 'bg-secondary' }}">{{ $job->status }}</span>
                             </div>
                         </div>
                     @endforeach
@@ -324,73 +323,6 @@
             </div>
         </section>
 
-        <div class="modal fade" id="job-details-modal" tabindex="-1" aria-labelledby="jobDetailsModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-scrollable">
-                <div class="modal-content">
-
-                    {{-- 1. BAGIAN HEADER BANNER --}}
-                    <div class="modal-header p-0 border-0 position-relative">
-                        <img src="http://career.sampharindogroup.com/assets/rekrutmen-banner.png"
-                            class="img-fluid w-100 rounded-top" alt="Sampharindo Group Career Banner"
-                            style="max-height: 150px; object-fit: cover;">
-
-                        {{-- Tombol Close di atas banner --}}
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-                            style="position: absolute; top: 15px; right: 15px; filter: invert(1); z-index: 10;">
-                        </button>
-                    </div>
-
-                    <div class="modal-body pt-4">
-                        {{-- 2. JUDUL UTAMA (POSISI & STATUS) --}}
-                        <h3 class="fw-bold mb-1" id="modal-position">Posisi Lowongan</h3>
-                        <p class="mb-4">
-                            <span class="badge bg-success" id="modal-status">Status: Open</span>
-                            <span class="text-muted small ms-3"><i class="bi bi-clock"></i> Dipublikasikan:
-                                Baru</span>
-                        </p>
-
-                        {{-- 3. DETAIL KUALIFIKASI --}}
-                        <div class="card mb-4 border-0">
-                            <div class="card-body p-0">
-                                <h5 class="fw-bold text-primary mb-3">Kualifikasi Utama</h5>
-                                <div id="modal-qualification" class="text-secondary ps-3">
-                                    {{-- Konten kualifikasi akan diisi oleh JavaScript --}}
-                                </div>
-                            </div>
-                        </div>
-
-                        {{-- 4. DESKRIPSI PEKERJAAN / LATAR BELAKANG --}}
-                        <div class="card mb-4 border-0">
-                            <div class="card-body p-0">
-                                <h5 class="fw-bold text-primary mb-3">Deskripsi Pekerjaan / Latar Belakang</h5>
-                                <div id="modal-background" class="text-secondary ps-3">
-                                    {{-- Konten deskripsi akan diisi oleh JavaScript --}}
-                                </div>
-                            </div>
-                        </div>
-
-                        <hr>
-
-                        <p class="small text-center text-muted mt-3">
-                            Pastikan kualifikasi dan berkas Anda sudah lengkap sebelum melamar.
-                        </p>
-
-                    </div>
-
-                    {{-- 5. FOOTER (CALL TO ACTION) --}}
-                    <div class="modal-footer d-flex justify-content-between">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup
-                            Detail</button>
-
-                        <a href="#" id="modal-apply-btn" class="btn btn-primary fw-bold px-4">
-                            <i class="bi bi-send me-2"></i> Lamar Sekarang
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
         <section id="call-to-action" class="call-to-action section dark-background">
             <img src="assets/img/cta-bg.png" alt="">
             <div class="container">
@@ -422,69 +354,69 @@
 
                     <div class="col-lg-3 col-md-4">
                         <div class="gallery-item">
-                            <a href="assets/img/gallery/audithalal.jpg" class="glightbox"
+                            <a href="{{ asset('assets/img/gallery/audithalal.jpg') }}" class="glightbox"
                                 data-gallery="images-gallery">
-                                <img src="assets/img/gallery/audithalal.jpg" alt="" class="img-fluid">
+                                <img src="{{ asset('assets/img/gallery/audithalal.jpg') }}" alt="" class="img-fluid">
                             </a>
                         </div>
                     </div><!-- End Gallery Item -->
 
                     <div class="col-lg-3 col-md-4">
                         <div class="gallery-item">
-                            <a href="assets/img/gallery/iso.jpg" class="glightbox" data-gallery="images-gallery">
-                                <img src="assets/img/gallery/iso.jpg" alt="" class="img-fluid">
+                            <a href="{{ asset('assets/img/gallery/iso.jpg') }}" class="glightbox" data-gallery="images-gallery">
+                                <img src="{{ asset('assets/img/gallery/iso.jpg') }}" alt="" class="img-fluid">
                             </a>
                         </div>
                     </div><!-- End Gallery Item -->
 
                     <div class="col-lg-3 col-md-4">
                         <div class="gallery-item">
-                            <a href="assets/img/gallery/posong.jpg" class="glightbox" data-gallery="images-gallery">
-                                <img src="assets/img/gallery/posong.jpg" alt="" class="img-fluid">
+                            <a href="{{ asset('assets/img/gallery/posong.jpg') }}" class="glightbox" data-gallery="images-gallery">
+                                <img src="{{ asset('assets/img/gallery/posong.jpg') }}" alt="" class="img-fluid">
                             </a>
                         </div>
                     </div><!-- End Gallery Item -->
 
                     <div class="col-lg-3 col-md-4">
                         <div class="gallery-item">
-                            <a href="assets/img/gallery/posong2.jpg" class="glightbox" data-gallery="images-gallery">
-                                <img src="assets/img/gallery/posong2.jpg" alt="" class="img-fluid">
+                            <a href="{{ asset('assets/img/gallery/posong2.jpg') }}" class="glightbox" data-gallery="images-gallery">
+                                <img src="{{ asset('assets/img/gallery/posong2.jpg') }}" alt="" class="img-fluid">
                             </a>
                         </div>
                     </div><!-- End Gallery Item -->
 
                     <div class="col-lg-3 col-md-4">
                         <div class="gallery-item">
-                            <a href="assets/img/gallery/gallery-5.jpg" class="glightbox"
+                            <a href="{{ asset('assets/img/gallery/gallery-5.jpg') }}" class="glightbox"
                                 data-gallery="images-gallery">
-                                <img src="assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
+                                <img src="{{ asset('assets/img/gallery/gallery-5.jpg') }}" alt="" class="img-fluid">
                             </a>
                         </div>
                     </div><!-- End Gallery Item -->
 
                     <div class="col-lg-3 col-md-4">
                         <div class="gallery-item">
-                            <a href="assets/img/gallery/gallery-6.jpg" class="glightbox"
+                            <a href="{{ asset('assets/img/gallery/gallery-6.jpg') }}" class="glightbox"
                                 data-gallery="images-gallery">
-                                <img src="assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
+                                <img src="{{ asset('assets/img/gallery/gallery-6.jpg') }}" alt="" class="img-fluid">
                             </a>
                         </div>
                     </div><!-- End Gallery Item -->
 
                     <div class="col-lg-3 col-md-4">
                         <div class="gallery-item">
-                            <a href="assets/img/gallery/gallery-7.jpg" class="glightbox"
+                            <a href="{{ asset('assets/img/gallery/gallery-7.jpg') }}" class="glightbox"
                                 data-gallery="images-gallery">
-                                <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
+                                <img src="{{ asset('assets/img/gallery/gallery-7.jpg') }}" alt="" class="img-fluid">
                             </a>
                         </div>
                     </div><!-- End Gallery Item -->
 
                     <div class="col-lg-3 col-md-4">
                         <div class="gallery-item">
-                            <a href="assets/img/gallery/gallery-8.jpg" class="glightbox"
+                            <a href="{{ asset('assets/img/gallery/gallery-8.jpg') }}" class="glightbox"
                                 data-gallery="images-gallery">
-                                <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
+                                <img src="{{ asset('assets/img/gallery/gallery-8.jpg') }}" alt="" class="img-fluid">
                             </a>
                         </div>
                     </div><!-- End Gallery Item -->
@@ -531,12 +463,12 @@
     <div id="preloader"></div>
 
     <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
+    <script src="{{ asset('assets/vendor/aos/aos.js') }}"></script>
+    <script src="{{ asset('assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
 
 </body>
 
