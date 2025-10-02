@@ -21,10 +21,7 @@ Route::get('sitemap.xml', function () {
         ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY));
     
     // 2. Tautan Halaman Rekrutmen (Form Aplikasi)
-    $sitemap->add(Url::create(route('rekrutmen.index')) 
-        ->setPriority(0.7) 
-        ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY));
-    
+
     // 3. Tautan Detail Lowongan (Iterasi dari Database)
     AvailableJobs::where('status', 'open')->get()->each(function (AvailableJobs $job) use ($sitemap) {
         
