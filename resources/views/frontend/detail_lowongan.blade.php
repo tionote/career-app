@@ -9,7 +9,7 @@
     <title>{{ $job->position }} - Lowongan Kerja Sampharindo Group</title>
     <meta name="description"
         content="Detail kualifikasi dan tanggung jawab untuk posisi {{ $job->position }} di Sampharindo Group. Segera kirimkan lamaran Anda!">
-    <meta name="keywords" content="lowongan kerja {{ $job->position }}, Sampharindo Group, pekerjaan Semarang, farmasi">
+    <meta name="keywords" content="Lowongan Kerja {{ $job->position }}, Karir Sampharindo Group, PT Sampharindo Perdana, Loker Farmasi Semarang, Rekrutmen {{ $job->position }}, Kerja di Sampharindo">
 
     <link href="/assets/icon.ico" rel="icon">
     <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -26,7 +26,76 @@
     <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <link href="/assets/css/main.css" rel="stylesheet">
+
+    {{-- JSON-LD JobPosting for Google For Jobs --}}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "JobPosting",
+      "title": "{{ $job->position }}",
+      "description": "{!! addslashes(strip_tags($job->qualification . $job->job_description)) !!}",
+      "datePosted": "{{ \Carbon\Carbon::parse($job->created_at)->format('Y-m-d') }}",
+      "validThrough": "2026-12-31T23:59:59Z",
+      "employmentType": "FULL_TIME",
+      "hiringOrganization": {
+        "@type": "Organization",
+        "name": "PT Sampharindo Perdana",
+        "sameAs": "https://sampharindogroup.com",
+        "logo": "https://simco.sampharindogroup.com/assets/icon.ico"
+      },
+      "jobLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jl. Tambak Aji Timur I No. 1",
+          "addressLocality": "Semarang",
+          "addressRegion": "Jawa Tengah",
+          "postalCode": "50185",
+          "addressCountry": "ID"
+        }
+      },
+      "baseSalary": {
+        "@type": "MonetaryAmount",
+        "currency": "IDR",
+        "value": {
+          "@type": "QuantitativeValue",
+          "value": 0,
+          "unitText": "MONTH"
+        }
+      }
+    }
+    </script>
+
+    {{-- JSON-LD BreadcrumbList for SERP --}}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://career.sampharindogroup.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Lowongan",
+          "item": "https://career.sampharindogroup.com/#available-jobs"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "{{ $job->position }}",
+          "item": "{{ url()->current() }}"
+        }
+      ]
+    }
+    </script>
 </head>
+
+
 
 <body class="detail-page">
 

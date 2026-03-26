@@ -5,33 +5,67 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     
-    <title>Lowongan Kerja & Karir Sampharindo Group (PT Sampharindo Perdana) - Loker Farmasi Semarang</title>
+    <meta name="google-site-verification" content="QL4cmLtuG_-nPInVlV-gG4i9e59Ksk7YlQnZ66H8Z0A" />
+    <title>Sampharindo Group - Lowongan Kerja & Karir Resmi (PT Sampharindo Perdana)</title>
     
-    <meta name="description" content="Temukan Lowongan Kerja terbaru di Sampharindo Group (PT Sampharindo Perdana) di Semarang. Raih Karir di industri Farmasi terkemuka! Cek posisi yang tersedia sekarang.">
+    <meta name="description" content="Portal Karir Resmi Sampharindo Group. Temukan lowongan kerja terbaru di PT Sampharindo Perdana, Semarang. Bergabunglah dengan industri farmasi terkemuka sekarang!">
     
-    <meta name="keywords" content="Lowongan Kerja Sampharindo Group, Karir Sampharindo, PT Sampharindo Perdana, Loker Farmasi Semarang, Lowongan Farmasi, Loker Semarang, Rekrutmen Sampharindo">
+    <meta name="keywords" content="Sampharindo Group, Lowongan Kerja Sampharindo, Karir PT Sampharindo Perdana, Loker Farmasi Semarang, Rekrutmen Sampharindo, Kerja di Sampharindo">
     
-    <link rel="canonical" href="https://[URL_LENGKAP_ANDA]/career">
+    <link rel="canonical" href="https://career.sampharindogroup.com">
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Sampharindo Group",
-      "legalName": "PT Sampharindo Perdana",
-      "url": "https://sampharindogroup.com",
+      "alternateName": "PT Sampharindo Perdana",
+      "url": "https://career.sampharindogroup.com",
       "logo": "https://simco.sampharindogroup.com/assets/icon.ico",
       "sameAs": [
         "https://www.instagram.com/career.sampharindo",
         "https://www.linkedin.com/company/sampharindogroup"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "Hiring & HRD",
-        "areaServed": "ID"
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "PT Sampharindo Perdana (Sampharindo Group)",
+      "image": "https://career.sampharindogroup.com/assets/img/gallery/perdana.jpg",
+      "@id": "https://career.sampharindogroup.com",
+      "url": "https://career.sampharindogroup.com",
+      "telephone": "+62247604318",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Tambak Aji Timur I No. 1",
+        "addressLocality": "Semarang",
+        "postalCode": "50185",
+        "addressRegion": "Jawa Tengah",
+        "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -6.9890,
+        "longitude": 110.3340
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "17:00"
       }
     }
     </script>
+
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1D9DD65HQP"></script>
     <script>
@@ -314,14 +348,15 @@
                       "@context": "https://schema.org",
                       "@type": "JobPosting",
                       "title": "{{ $job->position }} - Sampharindo Group",
-                      "description": "<p>{{ strip_tags($job->qualification) }}</p>",
-                      "datePosted": "{{ $job->created_at->format('Y-m-d') }}", 
-                      "validThrough": "2025-12-31", 
+                      "description": "{!! addslashes(strip_tags($job->qualification . $job->job_description)) !!}",
+                      "datePosted": "{{ \Carbon\Carbon::parse($job->created_at)->format('Y-m-d') }}", 
+                      "validThrough": "2026-12-31T23:59:59Z", 
                       "employmentType": "FULL_TIME",
                       "hiringOrganization": {
                         "@type": "Organization",
                         "name": "PT Sampharindo Perdana",
-                        "sameAs": "https://[URL_WEBSITE_UTAMA_SAMPHARINDO]"
+                        "sameAs": "https://sampharindogroup.com",
+                        "logo": "https://simco.sampharindogroup.com/assets/icon.ico"
                       },
                       "jobLocation": {
                         "@type": "Place",
@@ -330,6 +365,7 @@
                           "streetAddress": "Jl. Tambak Aji Timur I No. 1",
                           "addressLocality": "Semarang",
                           "addressRegion": "Jawa Tengah",
+                          "postalCode": "50185",
                           "addressCountry": "ID"
                         }
                       }
@@ -417,9 +453,10 @@
             <h3 class="sitename">CAREER SAMPHARINDO</h3>
             <p>Bergabunglah dengan tim kami dan kembangkan potensi Anda di <strong>industri farmasi Semarang</strong>!</p>
             <div class="social-links d-flex justify-content-center">
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.instagram.com/career.sampharindo" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/sampharindogroup" target="_blank"><i class="bi bi-linkedin"></i></a>
             </div>
+
             <div class="container">
                 <div class="copyright">
                     <span>Copyright</span> <strong class="px-1 sitename">PT. Sampharindo Perdana</strong> <span>All
