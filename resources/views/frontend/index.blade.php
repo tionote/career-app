@@ -368,6 +368,15 @@
                           "postalCode": "50185",
                           "addressCountry": "ID"
                         }
+                      },
+                      "baseSalary": {
+                        "@type": "MonetaryAmount",
+                        "currency": "IDR",
+                        "value": {
+                          "@type": "QuantitativeValue",
+                          "value": 0,
+                          "unitText": "MONTH"
+                        }
                       }
                     }
                     </script>
