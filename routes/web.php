@@ -32,8 +32,8 @@ Route::get('sitemap.xml', function () {
         }
         
         // FIX KRITIS: Generate slug secara dinamis dari 'position', 
-        // sama seperti cara Controller memvalidasinya.
-        $generatedSlug = Str::slug($job->position);
+        // ditambahkan ID di akhir agar unik.
+        $generatedSlug = Str::slug($job->position) . '-' . $job->id;
         
         // Memastikan parameter slug selalu diberikan ke jobs.show
         $url = route('jobs.show', ['slug' => $generatedSlug]);

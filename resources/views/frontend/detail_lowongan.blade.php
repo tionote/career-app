@@ -1,31 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('frontend.layouts.app')
 
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+@section('title', $job->position . ' - Lowongan Kerja Sampharindo Group')
 
-    {{-- **SEO OPTIMIZATION:** Menggunakan posisi sebagai judul halaman --}}
-    <title>{{ $job->position }} - Lowongan Kerja Sampharindo Group</title>
+@section('meta')
     <meta name="description"
         content="Detail kualifikasi dan tanggung jawab untuk posisi {{ $job->position }} di Sampharindo Group. Segera kirimkan lamaran Anda!">
     <meta name="keywords" content="Lowongan Kerja {{ $job->position }}, Karir Sampharindo Group, PT Sampharindo Perdana, Loker Farmasi Semarang, Rekrutmen {{ $job->position }}, Kerja di Sampharindo">
 
-    <link href="/assets/icon.ico" rel="icon">
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    {{-- Open Graph / Social Media Meta Tags --}}
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="{{ $job->position }} - Lowongan Kerja Sampharindo Group">
+    <meta property="og:description" content="Detail kualifikasi dan tanggung jawab untuk posisi {{ $job->position }} di Sampharindo Group. Segera kirimkan lamaran Anda!">
+    @if(!empty($job->url_image))
+    <meta property="og:image" content="{{ env('SIMCO_URL', 'https://simco.sampharindogroup.com') }}/view-job-image/{{ $job->url_image }}">
+    @else
+    <meta property="og:image" content="{{ asset('assets/img/gallery/perdana.webp') }}">
+    @endif
+    <meta property="og:site_name" content="Career Sampharindo Group">
 
-    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-    <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-    <link href="/assets/css/main.css" rel="stylesheet">
+    {{-- Twitter Card --}}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ url()->current() }}">
+    <meta name="twitter:title" content="{{ $job->position }} - Lowongan Kerja Sampharindo Group">
+    <meta name="twitter:description" content="Detail kualifikasi dan tanggung jawab untuk posisi {{ $job->position }} di Sampharindo Group. Segera kirimkan lamaran Anda!">
+    @if(!empty($job->url_image))
+    <meta name="twitter:image" content="{{ env('SIMCO_URL', 'https://simco.sampharindogroup.com') }}/view-job-image/{{ $job->url_image }}">
+    @else
+    <meta name="twitter:image" content="{{ asset('assets/img/gallery/perdana.webp') }}">
+    @endif
 
     {{-- JSON-LD JobPosting for Google For Jobs --}}
     <script type="application/ld+json">
@@ -93,28 +96,9 @@
       ]
     }
     </script>
-</head>
+@endsection
 
-
-
-<body class="detail-page">
-
-    <header id="header" class="header d-flex align-items-center fixed-top">
-        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-            <a href="{{ route('jobs.index') }}" class="logo d-flex align-items-center">
-                <h1 class="sitename">CAREER SAMPHARINDO GROUP</h1>
-            </a>
-            <nav id="navmenu" class="navmenu">
-                <ul>
-                    <li><a href="{{ route('jobs.index') }}">Home</a></li>
-                    <li><a href="{{ route('jobs.index') }}#available-jobs" class="active">Available Jobs !</a></li>
-                </ul>
-                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-            </nav>
-        </div>
-    </header>
-
-    <main class="main">
+@section('content')
         <div class="page-title dark-background">
             <div class="container position-relative">
                 {{-- JUDUL HALAMAN (H1) di sini --}}
@@ -151,6 +135,15 @@
                             <span class="text-muted small ms-3"><i class="bi bi-clock"></i> Dipublikasikan:
                                 {{ $job->created_at ?? 'Tanggal Tidak Tersedia' }}</span>
                         </p>
+
+                        @if(!empty($job->url_image))
+                        <div class="mb-5 text-center" data-aos="zoom-in">
+                            <a href="{{ env('SIMCO_URL', 'https://simco.sampharindogroup.com') }}/view-job-image/{{ $job->url_image }}" class="glightbox" data-gallery="flyer-gallery" title="Flyer {{ $job->position }}">
+                                <img src="{{ env('SIMCO_URL', 'https://simco.sampharindogroup.com') }}/view-job-image/{{ $job->url_image }}" alt="Flyer {{ $job->position }}" class="img-fluid rounded shadow" style="max-height: 600px; width: auto;">
+                            </a>
+                            <p class="text-muted small mt-2"><i class="bi bi-zoom-in"></i> Klik gambar untuk memperbesar</p>
+                        </div>
+                        @endif
 
                         <div class="card p-4 mb-4 border-0 shadow-sm">
                             <h2 class="h5 fw-bold text-primary mb-3">Kualifikasi Utama</h2>
@@ -225,24 +218,4 @@
                 </div>
             </div>
         </section>
-    </main>
-
-    <footer id="footer" class="footer light-background">
-        {{-- PASTIKAN KONTEN FOOTER DI SINI SAMA DENGAN DI index.blade.php --}}
-    </footer>
-
-    {{-- Scroll Top dan Preloader dipindahkan di sini (setelah footer) --}}
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
-    <div id="preloader"></div>
-
-    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/vendor/php-email-form/validate.js"></script>
-    <script src="/assets/vendor/aos/aos.js"></script>
-    <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-    <script src="/assets/js/main.js"></script>
-</body>
-
-</html>
+@endsection

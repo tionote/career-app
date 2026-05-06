@@ -22,21 +22,28 @@ class AvailableJobsController extends Controller
      */
     public function show($slug) // Hanya menerima $slug
     {
-        // 1. Ambil semua lowongan yang statusnya 'open'
-        $jobs = AvailableJobs::where('status', 'open')->get();
+        // Pecah slug untuk mendapatkan ID di akhir (format: judul-posisi-id)
+        $parts = explode('-', $slug);
+        $id = end($parts);
 
-        // 2. Cari lowongan dengan membandingkan SLUG URL dengan SLUG yang dibuat dari Position
-        $job = $jobs->first(function ($job) use ($slug) {
-            return Str::slug($job->position) === $slug;
-        });
+        // Cari lowongan berdasarkan ID dan status open
+        $job = AvailableJobs::where('status', 'open')->find($id);
 
-        // 3. Jika tidak ditemukan, lempar error 404
+        // Jika tidak ditemukan berdasarkan ID (misal URL lama tanpa ID), kita coba fallback cari berdasarkan nama
+        if (!$job) {
+            $jobs = AvailableJobs::where('status', 'open')->get();
+            $job = $jobs->first(function ($j) use ($slug) {
+                return Str::slug($j->position) === $slug;
+            });
+        }
+
+        // Jika benar-benar tidak ditemukan, lempar error 404
         if (!$job) {
             abort(404, 'Lowongan yang Anda cari tidak tersedia atau sudah ditutup.');
         }
 
-        // Opsional: Cek canonical URL untuk mencegah duplikasi SEO
-        $correctSlug = Str::slug($job->position);
+        // Cek canonical URL untuk memastikan slug selalu mengandung ID (format baru: posisi-id)
+        $correctSlug = Str::slug($job->position) . '-' . $job->id;
         if ($slug !== $correctSlug) {
             // Jika slug di URL salah, redirect ke slug yang benar
             return redirect()->route('jobs.show', ['slug' => $correctSlug]);
