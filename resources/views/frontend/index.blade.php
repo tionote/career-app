@@ -333,21 +333,38 @@
             </div>
 
             <div class="container">
-                <div class="row gy-4">
+                
+                {{-- Company Filter Tabs --}}
+                <div class="row mb-5" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-12 text-center">
+                        <div class="company-filter-buttons d-inline-flex flex-wrap gap-2 justify-content-center p-2 rounded-4 shadow-sm bg-light">
+                            <button type="button" class="btn btn-filter active px-4 py-2 rounded-pill fw-bold border-0" data-filter="all">
+                                <i class="bi bi-grid-fill me-1"></i> Semua Perusahaan
+                            </button>
+                            @foreach($companies as $company)
+                                <button type="button" class="btn btn-filter px-4 py-2 rounded-pill fw-bold border-0" data-filter="{{ $company->id }}">
+                                    <i class="bi bi-building me-1"></i> {{ $company->name }}
+                                </button>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row gy-4" id="jobs-container">
 
                     @foreach ($jobs as $job)
                     <script type="application/ld+json">
                     {
                       "@context": "https://schema.org",
                       "@type": "JobPosting",
-                      "title": "{{ $job->position }} - Sampharindo Group",
+                      "title": "{{ $job->position }} - {{ $job->company->name ?? 'Sampharindo Group' }}",
                       "description": "{!! addslashes(strip_tags($job->qualification . $job->job_description)) !!}",
                       "datePosted": "{{ \Carbon\Carbon::parse($job->created_at)->format('Y-m-d') }}", 
                       "validThrough": "2026-12-31T23:59:59Z", 
                       "employmentType": "FULL_TIME",
                       "hiringOrganization": {
                         "@type": "Organization",
-                        "name": "PT Sampharindo Perdana",
+                        "name": "{{ $job->company->name ?? 'PT Sampharindo Perdana' }}",
                         "sameAs": "https://sampharindogroup.com",
                         "logo": "https://simco.sampharindogroup.com/assets/icon.ico"
                       },
@@ -373,7 +390,7 @@
                       }
                     }
                     </script>
-                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="col-lg-4 col-md-6 job-item-card" data-company-id="{{ $job->company_id }}" data-aos="fade-up" data-aos-delay="100">
                             <div class="card border-0 shadow-sm rounded-4 h-100 overflow-hidden job-card-hover">
                                 
                                 {{-- Top Image/Placeholder --}}
@@ -394,8 +411,19 @@
 
                                 {{-- Card Body --}}
                                 <div class="card-body p-4 d-flex flex-column">
-                                    <div class="text-primary small fw-bold mb-2">
-                                        <i class="bi bi-clock me-1"></i> {{ date('d M Y', strtotime($job->created_at)) }}
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div class="text-primary small fw-bold">
+                                            <i class="bi bi-clock me-1"></i> {{ date('d M Y', strtotime($job->created_at)) }}
+                                        </div>
+                                        @if($job->company)
+                                            <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill px-2.5 py-1 small fw-bold" style="font-size: 0.72rem; letter-spacing: 0.2px;">
+                                                <i class="bi bi-building me-0.5"></i> {{ $job->company->name }}
+                                            </span>
+                                        @else
+                                            <span class="badge bg-secondary-subtle text-secondary border border-secondary-subtle rounded-pill px-2.5 py-1 small fw-bold" style="font-size: 0.72rem; letter-spacing: 0.2px;">
+                                                Sampharindo Group
+                                            </span>
+                                        @endif
                                     </div>
                                     
                                     <h4 class="card-title fw-bold text-dark mb-3" style="font-size: 1.25rem; line-height: 1.4;">
@@ -422,6 +450,37 @@
             </div>
             
             <style>
+                .company-filter-buttons {
+                    background-color: #f8f9fa;
+                    border: 1px solid rgba(0,0,0,0.06);
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.04) !important;
+                }
+                .btn-filter {
+                    color: #555;
+                    background-color: transparent;
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                    font-size: 0.88rem;
+                }
+                .btn-filter:hover {
+                    color: var(--bs-primary);
+                    background-color: rgba(13, 110, 253, 0.08);
+                }
+                .btn-filter.active {
+                    color: #fff !important;
+                    background-color: var(--bs-primary);
+                    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+                }
+                .job-item-card {
+                    transition: opacity 0.35s ease, transform 0.35s ease;
+                    opacity: 1;
+                    transform: scale(1);
+                }
+                .bg-primary-subtle {
+                    background-color: #e6f0ff !important;
+                }
+                .border-primary-subtle {
+                    border-color: #b3d1ff !important;
+                }
                 .job-card-hover {
                     transition: all 0.3s ease;
                     border: 1px solid rgba(0,0,0,0.05) !important;
@@ -455,6 +514,44 @@
                     color: white;
                 }
             </style>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const filterButtons = document.querySelectorAll('.btn-filter');
+                    const jobCards = document.querySelectorAll('.job-item-card');
+
+                    filterButtons.forEach(button => {
+                        button.addEventListener('click', function() {
+                            // Hapus kelas aktif dari semua tombol
+                            filterButtons.forEach(btn => btn.classList.remove('active'));
+                            // Tambahkan kelas aktif ke tombol yang diklik
+                            this.classList.add('active');
+
+                            const filterValue = this.getAttribute('data-filter');
+
+                            jobCards.forEach(card => {
+                                const cardCompanyId = card.getAttribute('data-company-id');
+                                
+                                if (filterValue === 'all' || cardCompanyId === filterValue) {
+                                    card.style.display = '';
+                                    setTimeout(() => {
+                                        card.style.opacity = '1';
+                                        card.style.transform = 'scale(1)';
+                                    }, 20);
+                                } else {
+                                    card.style.opacity = '0';
+                                    card.style.transform = 'scale(0.95)';
+                                    setTimeout(() => {
+                                        if (card.style.opacity === '0') {
+                                            card.style.display = 'none';
+                                        }
+                                    }, 350);
+                                }
+                            });
+                        });
+                    });
+                });
+            </script>
         </section>
 
         <section id="call-to-action" class="call-to-action section dark-background">

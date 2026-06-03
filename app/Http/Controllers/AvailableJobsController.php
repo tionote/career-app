@@ -13,8 +13,9 @@ class AvailableJobsController extends Controller
      */
     public function index()
     {
-        $jobs = AvailableJobs::where('status', 'open')->get();
-        return view('frontend.index', compact('jobs'));
+        $jobs = AvailableJobs::with('company')->where('status', 'open')->get();
+        $companies = \App\Models\Company::all();
+        return view('frontend.index', compact('jobs', 'companies'));
     }
 
     /**
@@ -27,11 +28,11 @@ class AvailableJobsController extends Controller
         $id = end($parts);
 
         // Cari lowongan berdasarkan ID dan status open
-        $job = AvailableJobs::where('status', 'open')->find($id);
+        $job = AvailableJobs::with('company')->where('status', 'open')->find($id);
 
         // Jika tidak ditemukan berdasarkan ID (misal URL lama tanpa ID), kita coba fallback cari berdasarkan nama
         if (!$job) {
-            $jobs = AvailableJobs::where('status', 'open')->get();
+            $jobs = AvailableJobs::with('company')->where('status', 'open')->get();
             $job = $jobs->first(function ($j) use ($slug) {
                 return Str::slug($j->position) === $slug;
             });

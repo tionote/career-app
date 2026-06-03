@@ -42,7 +42,7 @@
       "employmentType": "FULL_TIME",
       "hiringOrganization": {
         "@type": "Organization",
-        "name": "PT Sampharindo Perdana",
+        "name": "{{ $job->company->name ?? 'PT Sampharindo Perdana' }}",
         "sameAs": "https://sampharindogroup.com",
         "logo": "https://simco.sampharindogroup.com/assets/icon.ico"
       },
@@ -132,9 +132,22 @@
                         <p class="mb-5">
                             <span
                                 class="badge {{ $job->status == 'Open' ? 'bg-success' : 'bg-secondary' }}">{{ $job->status }}</span>
+                            @if($job->company)
+                                <span class="badge bg-primary-subtle text-primary border border-primary-subtle ms-2 px-3 py-1.5 fw-bold" style="font-size: 0.82rem;">
+                                    <i class="bi bi-building me-1"></i> {{ $job->company->name }}
+                                </span>
+                            @endif
                             <span class="text-muted small ms-3"><i class="bi bi-clock"></i> Dipublikasikan:
                                 {{ $job->created_at ?? 'Tanggal Tidak Tersedia' }}</span>
                         </p>
+                        <style>
+                            .bg-primary-subtle {
+                                background-color: #e6f0ff !important;
+                            }
+                            .border-primary-subtle {
+                                border-color: #b3d1ff !important;
+                            }
+                        </style>
 
                         @if(!empty($job->url_image))
                         <div class="mb-5 text-center" data-aos="zoom-in">

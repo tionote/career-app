@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class AvailableJobs extends Model
+class Company extends Model
 {
     use HasFactory;
 
@@ -14,13 +14,13 @@ class AvailableJobs extends Model
      *
      * @var string
      */
-    protected $table = 'available_jobs';
+    protected $table = 'companies';
 
     /**
-     * Get the company that owns the available job.
+     * Get the jobs associated with the company.
      */
-    public function company()
+    public function jobs()
     {
-        return $this->belongsTo(Company::class, 'company_id');
+        return $this->hasMany(AvailableJobs::class, 'company_id');
     }
 }
